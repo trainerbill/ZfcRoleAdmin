@@ -1,0 +1,13 @@
+<div class="row-fluid">
+	
+		<?php 
+			$form = $this->form;
+			$form->prepare();
+			echo $this->form()->openTag($form);
+			echo $this->ztbFormElement($form->get('role_id'));
+			echo $this->ztbFormElement($form->get('is_default'));
+			echo $this->ztbFormElement($form->get('parent_id'));
+			echo $this->formSubmit($form->get('submit'));
+			echo $this->form()->closeTag();
+		?>
+</div>

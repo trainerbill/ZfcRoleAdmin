@@ -1,0 +1,20 @@
+<h3>Role Membership</h3>
+<a class="btn" href="<?php echo $this->url('zfcadmin/zfcrolemembership', array('action'=>'add'));?>">Add Role Membership</a> 
+<table class="table table-hover table-bordered table-condensed">
+	<thead>
+	<tr>
+		<th>User</th>
+		<th>Role</th>
+		<th>Delete</th>
+	</tr>
+	</thead>
+	<tbody>
+		<?php  foreach($memberships as $member): ?>
+		<tr>
+			<td><?php echo $member->email ?></td>
+			<td><?php echo $member->role_name ?></td>
+			<td><a class="btn" href="<?php echo $this->url('zfcadmin/zfcrolemembership', array('action'=>'delete','id'=>$member->id)); ?>">Delete</a></td>
+		</tr>
+		<?php endforeach;?>
+	</tbody>
+</table>
